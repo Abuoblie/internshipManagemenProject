@@ -1,28 +1,18 @@
 package com.internship.management;
-
-import com.internship.management.models.entities.Category;
-import com.internship.management.models.entities.Role;
-import com.internship.management.repositories.CategoryRepository;
-import com.internship.management.repositories.RoleRepository;
-import com.internship.management.servicies.EmailService;
-import jakarta.mail.MessagingException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.context.event.ApplicationReadyEvent;
-import org.springframework.context.event.EventListener;
 
-import java.util.Arrays;
+
 import java.util.logging.Logger;
 
 @SpringBootApplication
 @RequiredArgsConstructor
 public class InternshipManagemenProjectApplication implements CommandLineRunner {
     private static final Logger logger = Logger.getLogger("InternshipManagemenProjectApplication");
-    private final RoleRepository roleRepository;
-    private final CategoryRepository categoryRepository;
-    private final EmailService emailService;
+    // private final EmailService emailService;*
+
     public static void main(String[] args) {
 
         SpringApplication.run(InternshipManagemenProjectApplication.class, args);
@@ -54,8 +44,8 @@ public class InternshipManagemenProjectApplication implements CommandLineRunner 
         emailService.sendMailWithAttachment(
                 "mickylords1@hotmail.com",
                 "just testing spring email",
-                "hey you dont't let your troubles get you down",
-                "C:/Users/a.oblie/Desktop/JPA_Fundamentals.pdf"
+                "hey you don't let your troubles get you down",
+                "C:\\Users\\micky\\OneDrive\\Desktop\\Picaso.pdf"
         );
     }*/
 }
